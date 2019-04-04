@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.benjaminsanchezthethird.davidsnotebook.display_measurements">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMeasurements"
+        android:layout_width="0dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewMeasurementDisplay">
+
+        <TextView
+            android:id="@+id/textViewMeasurementHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="28dp"
+            android:layout_toLeftOf="@+id/textViewMeasurementHeightAmount"
+            android:layout_toStartOf="@+id/textViewMeasurementHeightAmount"
+            android:text="Height:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewMeasurementWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textViewMeasurementHeight"
+            android:layout_alignRight="@+id/textViewMeasurementHeight"
+            android:layout_below="@+id/textViewMeasurementType"
+            android:layout_marginTop="16dp"
+            android:text="Width:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewMeasurementHeightAmount"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewMeasurementHeight"
+            android:layout_alignBottom="@+id/textViewMeasurementHeight"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textViewMeasurementWidthAmount"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewMeasurementWidth"
+            android:layout_alignLeft="@+id/textViewMeasurementHeightAmount"
+            android:layout_alignStart="@+id/textViewMeasurementHeightAmount"
+            android:text="0"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textViewMeasurementType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewMeasurementHeightAmount"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/textViewMeasurementHeightAmount"
+            android:layout_toRightOf="@+id/textViewMeasurementHeightAmount"
+            android:text="un "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewMeasurementType2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewMeasurementWidthAmount"
+            android:layout_alignEnd="@+id/textViewMeasurementType"
+            android:layout_alignRight="@+id/textViewMeasurementType"
+            android:text="un "
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listViewMeasurementDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutMeasurements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
